@@ -1,0 +1,257 @@
+{
+  "id": "6c8f5792-7222-48cf-b9e0-53b08607614b",
+  "version": "3.0",
+  "name": "Test Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "64a2b24e-11f7-440f-8ab5-fd7082ae7461",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "e9ebe6f5-3b9f-4bea-9127-04306e930caa",
+      "name": "TC-03 - Search Test",
+      "commands": [
+        {
+          "id": "5695e2bd-29a9-48f9-9c01-6dcb6dd9ec1b",
+          "command": "open",
+          "target": "https://store.steampowered.com//",
+          "value": ""
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "5d2314a1-bbc9-4ff9-9e76-1c3ac6be9057"
+        },
+        {
+          "command": "click",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "",
+          "id": "60bac77e-2169-495a-a05d-c607ac28ed21"
+        },
+        {
+          "command": "type",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "Counter Strike 2",
+          "id": "b7ed921f-057d-4afa-a158-4317b805c5c1"
+        },
+        {
+          "command": "sendKeys",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "${KEY_ENTER}",
+          "id": "520b8c97-e2d3-4883-91e1-8c1f151e4111"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "79c16e84-51b9-436b-8578-9857397820d1"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.search_result_row:nth-of-type(2) .title",
+          "value": "Counter-Strike 2",
+          "id": "31d58257-d303-44cb-87d2-f90793b0aca1"
+        }
+      ]
+    },
+    {
+      "id": "b7973eb9-9061-4058-a92b-2d43ff924759",
+      "name": "TC-09 Search + Add to Cart Test",
+      "commands": [
+        {
+          "id": "1e28902d-da9f-47a0-b373-d8097e717e4c",
+          "command": "open",
+          "target": "https://store.steampowered.com/",
+          "value": ""
+        },
+        {
+          "command": "pause",
+          "target": "2000",
+          "value": "",
+          "id": "c4b075d4-f07a-4d4f-890f-02f4701ce8bb"
+        },
+        {
+          "command": "click",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "",
+          "id": "972cab17-71ef-4cdc-8383-8d49e086c3aa"
+        },
+        {
+          "command": "type",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "Forza Horizon 6",
+          "id": "5005a83b-7c68-4554-bd9f-eb52100943ae"
+        },
+        {
+          "command": "sendKeys",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "${KEY_ENTER}",
+          "id": "6859435e-7c49-47fe-8e11-7747eb6513d1"
+        },
+        {
+          "command": "pause",
+          "target": "2000",
+          "value": "",
+          "id": "bcd71fa5-ce5b-4d64-a696-a98f035d39ec"
+        },
+        {
+          "command": "click",
+          "target": "css=.search_result_row:first-child",
+          "value": "",
+          "id": "cf38b13b-bbcb-4211-9414-159dd9c33fbf"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "0992c30f-345f-44e0-b65c-34dd1f826d99"
+        },
+        {
+          "command": "click",
+          "target": "css=.btn_addtocart a",
+          "value": "",
+          "id": "f28b5bfa-aeed-492e-908b-3224f8c477e9"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "3b67439c-6b2c-47aa-b5b8-fd25ee27247f"
+        },
+        {
+          "command": "click",
+          "target": "css=button.Primary",
+          "value": "",
+          "id": "c8b93009-e651-48e3-9c38-96ddba366ef5"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "90b9714e-9937-4f39-8cb5-bd50f286bd7f"
+        },
+        {
+          "command": "assertElementPresent",
+          "target": "css=a[href*='Forza_Horizon_6']",
+          "value": "",
+          "id": "52887c14-e65f-4506-aee2-aff021d00bb7"
+        }
+      ]
+    },
+    {
+      "id": "91b745bd-74e9-4bce-b44f-1bb013178ce2",
+      "name": "TC-10 Remove Item From Cart",
+      "commands": [
+        {
+          "id": "ee3b80a2-7378-4aff-9855-ae3bfbee85c9",
+          "command": "open",
+          "target": "https://store.steampowered.com//",
+          "value": ""
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "3a5643a2-2fff-4480-8244-36ca727a6402"
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='/cart']",
+          "value": "",
+          "id": "607658ee-2fe8-4721-831e-2a013c727550"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "257fbdde-7000-4a4a-a753-2541ea09a0a4"
+        },
+        {
+          "command": "click",
+          "target": "xpath=//*[contains(text(),'Kaldır')]",
+          "value": "",
+          "id": "51fe7494-88b5-4a4a-8c42-4cc5124452af"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "41980dc6-4943-494e-9845-d6337bd71e87"
+        },
+        {
+          "command": "assertElementNotPresent",
+          "target": "css=.cart_item",
+          "value": "",
+          "id": "254377f7-ab09-455b-a9a2-4901cacbe088"
+        }
+      ]
+    },
+    {
+      "id": "bb784983-16b2-4f51-990b-f48d18fa785c",
+      "name": "TC-04 Invalid Search Test",
+      "commands": [
+        {
+          "id": "61dca58d-1487-4c05-b946-3c297dd6bcc1",
+          "command": "open",
+          "target": "https://store.steampowered.com//",
+          "value": ""
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "66cab804-4159-4fc6-9774-4f3da36944e0"
+        },
+        {
+          "command": "click",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "",
+          "id": "fd7140b0-dce7-4cf2-bc58-ef6fb24bc830"
+        },
+        {
+          "command": "type",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "Counter Strieke 2",
+          "id": "b86fa92f-0aba-47a4-b204-5b709e1dd3a4"
+        },
+        {
+          "command": "sendKeys",
+          "target": "css=input[placeholder='Mağazada ara']",
+          "value": "${KEY_ENTER}",
+          "id": "028a0508-5d61-4a49-beeb-fa19a908ba95"
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "34fd5456-f334-4bd8-b8ef-78da593d5c19"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.search_results_count",
+          "value": "0 sonuç aramanızla eşleşiyor.",
+          "id": "a571f8d6-d604-4106-840c-cdb070b71513"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
